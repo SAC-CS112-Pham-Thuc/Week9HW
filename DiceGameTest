@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+
+public class DiceGameTest 
+{
+	public static void main(String[] args) 
+	{
+		String userInputUpperCase;
+		int count = 1;
+		do
+		{
+		
+		JOptionPane.showMessageDialog(null, "Game Number: " + count ); count++; 	
+		DiceGame dicegame1 = new DiceGame();
+		
+		String player = JOptionPane.showInputDialog ("Guess if Dice number is EVEN or ODD!");
+		dicegame1.DiceGame(player);
+		
+		String answer = JOptionPane.showInputDialog( "Do you want to play again? ");
+		userInputUpperCase = answer.toUpperCase();
+		}
+		while ((userInputUpperCase.equals("YES")));
+		JOptionPane.showMessageDialog(null,"Good Bye!");
+		
+		
+	}
+
+}
