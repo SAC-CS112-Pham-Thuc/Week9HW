@@ -1,0 +1,39 @@
+import javax.swing.JOptionPane;
+
+
+public class DiceGame 
+{
+	private int diceNum = (0 + (int)( Math.random()* 6));;
+
+	private String playerInput;
+	
+	public void DiceGame( String playerInput )
+	{		
+		switch(playerInput.toLowerCase())
+		{
+		case "even":
+		{
+			if ( diceNum == 0 || diceNum == 2 || diceNum == 4 || diceNum == 6 )
+				JOptionPane.showMessageDialog(null, "Player Win!");
+			else
+				JOptionPane.showMessageDialog(null, "Player Lose! Dice Numer is " + diceNum + "!" );
+		}
+			break;
+		case "odd":
+			if ( diceNum == 1 || diceNum == 3 || diceNum == 5 )
+				JOptionPane.showMessageDialog(null, "Player Win!");
+			else
+				JOptionPane.showMessageDialog(null, "Player Lose! Dice Numer is " + diceNum + "!" );
+			break;
+			
+		}
+	}
+	
+
+	public String getPlayerInput()
+	{
+		return playerInput;
+	}
+
+	
+}
